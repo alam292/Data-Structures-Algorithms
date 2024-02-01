@@ -1,0 +1,18 @@
+import java.util.*;
+
+class Stars {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        for(int i=1; i<=number; i++){                           // Outer Loop
+            for(int j=1; j<=i; j++){                            // Inner Loop
+                System.out.print(" * ");
+            }
+        }
+        System.out.println();
+    }
+}
