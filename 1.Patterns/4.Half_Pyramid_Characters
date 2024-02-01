@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class half_pyramid_character {
+
+    public static void main(String[]args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+        char ch ='A';                                           // for characters be starts
+
+        for(int i=1; i<=number; i++){                           // Outer loop
+
+            for(int j=1; j<=i; j++){                            // inner loop
+
+                System.out.print(ch);
+                ch++;                                           // characters update
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+/*Enter a number of line : 5
+A
+BC
+DEF
+GHIJ
+KLMNO
+ */
