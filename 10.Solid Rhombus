@@ -1,0 +1,36 @@
+import java.util.*;
+public class solid_rhombus {
+    public static void SolidRhombus(int number){
+
+        // print outer loop
+        for(int i=1;i<=number;i++){
+            // print spaces
+            for(int j=1;j<=(number-i);j++){
+                System.out.print(" ");
+            }
+            // print stars
+            for(int j=1;j<=number;j++){
+                System.out.print(" *");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        
+        Scanner sc =  new Scanner(System.in);
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        SolidRhombus(number);
+    }
+}
+
+/*
+ *Enter a number of line : 6
+      * * * * * *
+     * * * * * *
+    * * * * * *
+   * * * * * *
+  * * * * * *
+ * * * * * *
+ */
