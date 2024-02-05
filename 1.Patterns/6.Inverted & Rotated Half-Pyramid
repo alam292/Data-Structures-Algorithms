@@ -1,1 +1,42 @@
+import java.util.*;
+/**
+ * inverted_rotated_half_pyramid
+ */
+public class inverted_rotated_half_pyramid {
 
+    public static void InvertedHalfpyramid(int number){
+        
+
+        // outer loop
+        for(int i =1 ;i<=number ; i++){
+
+            // for spaces
+            for(int j=1; j<=number-i;j++){
+                System.out.print(" ");
+            }
+            // stars print
+            for(int j =1 ; j<=i ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        InvertedHalfpyramid(number);
+
+    }
+}
+
+/*
+Enter a number of line : 5
+    *
+   **
+  ***
+ ****
+*****
+ */
