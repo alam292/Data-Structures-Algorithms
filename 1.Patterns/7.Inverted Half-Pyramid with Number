@@ -1,1 +1,36 @@
+import java.util.*;
 
+public class Inverted_Half_Pyramid_Number_Pattern {
+
+    public static void Pyramid_Number(int number){
+
+        // for outer loop
+        for(int i = 1 ;i<=number; i++){
+
+            //for number print
+            for(int j =1 ;j<=number-i+1;j++){
+                System.out.print(" "+j);
+                
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        Pyramid_Number(number);
+
+    }
+}
+
+/*
+Enter a number of line : 5
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+ */
