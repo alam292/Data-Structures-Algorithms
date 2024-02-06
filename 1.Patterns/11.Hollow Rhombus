@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+/**
+ * hollow_solid
+ */
+public class hollow_solid {
+
+    public static void HollowSolid(int number) {
+
+        // outer loop
+        for (int i = 1; i <= number; i++) {
+            // print spaces
+            for (int j = 1; j <= (number - i); j++) {
+                System.out.print(" ");
+            }
+            // print stars
+            for (int j = 1; j <= number; j++) {
+                if (i == 1 || i == number || j == 1 || j == number) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        HollowSolid(number);
+    }
+}
+
+/*
+Enter a number of line : 7
+      *******
+     *     *
+    *     *
+   *     *
+  *     *
+ *     *
+*******
+ */
