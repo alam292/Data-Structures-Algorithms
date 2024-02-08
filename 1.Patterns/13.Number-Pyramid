@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class number_pyramid {
+    
+    public static void NumberPyramid(int number){
+
+        // print outer loop
+        for(int i=1;i<=number;i++){
+            // print spaces ---> inner loop
+            for(int j=1;j<=number-i;j++){
+                System.out.print(" ");
+            }
+            //print number
+            for(int j=1;j<=i;j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[]args){
+
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        NumberPyramid(number);
+    }
+}
+
+/*
+Enter a number of line : 7
+      1 
+     2 2 
+    3 3 3 
+   4 4 4 4 
+  5 5 5 5 5 
+ 6 6 6 6 6 6 
+7 7 7 7 7 7 7 
+ */
