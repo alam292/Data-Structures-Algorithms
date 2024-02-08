@@ -1,1 +1,46 @@
 
+import java.util.*;
+/**
+ * InnerPalindromic
+ */
+
+public class Palindromic {
+
+    public static void Palindromic(int number){
+
+        // print outer loop
+        for(int i=1;i<=number;i++){
+            // print spaces
+            for(int j=1;j<=number-i;j++){
+                System.out.print(" ");
+            }
+            // descending loop
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            // ascending loop
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter a number of line : ");
+        int number = sc.nextInt();
+
+        Palindromic(number);
+    }
+}
+
+/*
+Enter a number of line : 6
+     1
+    212
+   32123
+  4321234
+ 543212345
+65432123456
+ */
