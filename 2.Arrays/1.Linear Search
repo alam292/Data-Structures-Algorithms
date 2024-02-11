@@ -1,1 +1,54 @@
 
+import java.util.Scanner;
+
+public class Linear_Search {
+
+    public static int LinearSearch(int numbers[], int key) {
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // for input data
+        int numbers[] = new int[10];
+        System.out.print("Enter an elements of arrays : ");
+        for (int i = 0; i < 10; i++) {                      // 10 means size of array
+            numbers[i] = sc.nextInt();
+        }
+
+        // for key find
+        System.out.print("Enter a key : ");
+        int key = sc.nextInt();
+
+        // for search the key
+        int index = LinearSearch(numbers, key);
+        if (index == -1) {
+            System.out.print("Not Found");
+        } else {
+            System.out.print("Key is at index : " + index);
+        }
+    }
+}
+
+/*
+Enter an elements of arrays : 2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+Enter a key : 16
+Key is at index : 7
+ */
