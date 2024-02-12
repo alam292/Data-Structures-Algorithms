@@ -1,1 +1,54 @@
+import java.util.*;
 
+public class Binary_Search_code {
+
+    public static int BinarySearch(int number[],  int key){
+
+        int start = 0;
+        int end = number.length-1;
+
+        while(start<=end){
+            int middle = (start+end)/2;
+
+            // for comparisons
+            if(number[middle]==key){
+                return middle;
+            }
+            if(number[middle]<key){             // for right
+                start = middle+1;
+            }
+            else{                                   // for left
+                end = middle-1;
+            }
+        }
+        return -1;
+    }
+    
+    public static void main(String[]args){
+
+        Scanner sc = new Scanner(System.in);
+
+        // for input data
+        int number[] = new int[5];              // 5 is size of array
+        System.out.print("Enter an array of elements : ");
+        for(int i=0; i<number.length; i++){
+            number[i] = sc.nextInt();
+        }
+        // for key
+        System.out.print("Enter a key : ");
+        int key = sc.nextInt();
+
+        System.out.print("Index for key : " +BinarySearch(number, key));
+    }
+}
+
+
+/*
+Enter an array of elements : 4
+86
+95
+3
+7
+Enter a key : 95
+Index for key : 2
+ */
