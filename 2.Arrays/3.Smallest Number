@@ -1,1 +1,37 @@
+import java.util.*;
 
+public class Smallest_Number {
+
+    public static int Smallest(int number[]){
+
+        int smallest = Integer.MAX_VALUE;               // plus infinity
+        for(int i=0; i<number.length; i++){
+            if(smallest>number[i]){
+                smallest = number[i];
+            }
+        }
+        return smallest;
+    }
+    
+    public static void main(String[]args){
+
+        Scanner sc = new Scanner(System.in);
+        // for input data
+        int number[] = new int[5];                  // 5 is size of array
+        System.out.print("Enter an array of elements : ");
+        for(int i=0; i<number.length; i++){
+            number[i] = sc.nextInt();
+        }
+        System.out.print("Smallest value is : "+Smallest(number));
+    }
+}
+
+
+/*
+Enter an array of elements : 78
+95
+96
+24
+68
+Smallest value is : 24
+ */
